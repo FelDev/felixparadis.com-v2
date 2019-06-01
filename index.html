@@ -115,32 +115,59 @@
 
     <ul>
         <li>
-            <a href="https://www.linkedin.com/in/felix-paradis/">LinkedIn</a> 
+            <a href="https://medium.com/@FelDev">Medium</a><span id="jokeP"></span>
         </li>
         <li>
-            <a href="https://github.com/Mesieu">GitHub</a> 
+            <a href="https://www.linkedin.com/in/felix-paradis/">LinkedIn</a>
         </li>
         <li>
-            <a href="https://stackoverflow.com/users/5941620/feldev?tab=profile">Stack Overflow</a> 
+            <a href="https://github.com/Mesieu">GitHub</a>
+        </li>
+        <li>
+            <a href="https://codepen.io/FelDev/">Code Pen</a>
+        </li>
+        <li>
+            <a href="https://stackoverflow.com/users/5941620/feldev?tab=profile">Stack Overflow</a>
         </li>
         <li>
             <a href="#" onclick="funnyGuy()">Club Penguin</a><span id="jokeP"></span>
         </li>
-        <!-- https://medium.com/@FelDev ? -->
-            
     </ul>
     
     <footer>
-        © Félix Paradis 2018 – <script>document.write(new Date().getFullYear())</script>
+        © Félix Paradis 2018 – <span id="time"></span>
     </footer>
     
      <script type="text/javascript">  
- 	
+        
+        function addZeroIfNeeded(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+        }
+
+        function startTime() {
+        var today = new Date();
+        var y = today.getFullYear();
+        var M = addZeroIfNeeded(today.getMonth());
+        var d = addZeroIfNeeded(today.getDay());
+        var h = today.getHours();
+        var m = addZeroIfNeeded(today.getMinutes());
+        var s = addZeroIfNeeded(today.getSeconds());
+        
+        document.getElementById('time').innerHTML = d + "/" + M + "/" + y + " " + h + ":" + m + ":" + s;
+        t = setTimeout(function() {
+            startTime()
+        }, 500);
+        }
+        startTime();
+
         function funnyGuy() {
             document.getElementById("jokeP").innerHTML = " No, not really."
         }
      
-        console.log("ready?")
+        
         // activateCheats()
         // the 'official' Konami Code sequence
         var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
