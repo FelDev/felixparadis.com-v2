@@ -132,9 +132,6 @@
         <li>
             <a href="#" onclick="funnyGuy()">Club Penguin</a><span id="jokeP"></span>
         </li>
-        <li>
-                <a href="./ici.html">Quick test...</a>
-        </li>
     </ul>
     
     <footer>
@@ -153,7 +150,7 @@
         function startTime() {
         var today = new Date();
         var y = today.getFullYear();
-        var M = addZeroIfNeeded(today.getMonth());
+        var M = addZeroIfNeeded(today.getMonth()+1);
         var d = addZeroIfNeeded(today.getDate());
         var h = today.getHours();
         var m = addZeroIfNeeded(today.getMinutes());
