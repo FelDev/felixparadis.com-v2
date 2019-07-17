@@ -56,52 +56,169 @@
     <meta property="og:image" content="https://www.felixparadis.com/portrait.png" />
     <meta name="author" content="Félix Paradis">
 
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <style>
+        @keyframes crazyBG {
+            0%   {background-color: #F00;}
+            33.3%  {background-color: #0F0;}
+            66.6%  {background-color: #00F;}
+            100%  {background-color: #F00;}
+        }
+        
+        @keyframes fall {
+            0%   {top: -10vh;}
+            90%   {top: 110vh;}
+            91%   {opacity:1;}
+            92%   {top: 110vh;}
+            93%   {opacity:0;}
+            100%   {top: -10vh;
+                opacity:0;}
+        }
+        
+        @keyframes rotate {
+            0%   {transform: rotate(0deg);}
+            100%   {transform: rotate(360deg);}
+        }
 
-    <script type="text/javascript" async="" src="index.js"></script>
+        @keyframes zoomies {
+            0%   {font-size: 1em;}
+            50%   {font-size: 4em;}
+            100%   {font-size: 1em;}
+        }
 
+        .joy {
+            animation: fall 5s infinite linear,
+                        rotate 4s infinite linear;
+            position:absolute;
+            font-size: 3em;
+        }
+
+        .wow {
+            color: #FFF;
+            animation: zoomies 3s infinite;
+        }
+
+        li {
+            margin: 0.25em 0;
+            padding: 0.25em;        
+        }
+      </style>
  </head>
 
  <body>
-    <main>
 
-        <h1><span> Bonjour!</span> <span>Hi!</span></h1>
-        <!-- <h1><button> Bonjour!</button> <button>Hi!</button></h1> -->
+    <h1>Bonjour! Hi!</h1>
+     
+    <hr/>
+          
+    <h2> I am a great full stack web developer with a slight focus on the back-end. </h2>
+		 
+    <p>
+        I heard about CSS once. Maybe I'll try it someday.
+    </p>
+    <p>
+        While you wait for me to do something interesting here, you can find me online at various places:
+    </p>
 
-        <h2> I'm Félix Paradis 👋 </h2>
-        <h3> I believe dark theme is good theme. </h3>
-
-        <p>
-            Most of my non-work code is on <a href="https://github.com/FelDev">GitHub</a> or <a href="https://codepen.io/FelDev/">Code Pen</a>. I also have a  <a href="https://stackexchange.com/users/7861276/feldev?tab=accounts">Stack Exchange</a> account.
-        </p>
-        
-        <p>
-            I write words on <a href="https://medium.com/@FelDev">Medium</a>.
-        </p>
-        
-        <p>
-            Find me online at other places:
-        </p>
-        
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/felix-paradis/">LinkedIn</a>
-            </li>
-            <li>
-                <a href="#" onclick="funnyGuy()">Club Penguin</a><span id="jokeP"></span>
-            </li>
-        </ul>
-        
-        
-    </main>
-        
+    <ul>
+        <li>
+            <a href="https://medium.com/@FelDev">Medium</a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/felix-paradis/">LinkedIn</a>
+        </li>
+        <li>
+            <a href="https://github.com/FelDev">GitHub</a>
+        </li>
+        <li>
+            <a href="https://codepen.io/FelDev/">Code Pen</a>
+        </li>
+        <li>
+                <a href="https://stackoverflow.com/users/5941620/feldev?tab=profile">Stack Overflow</a>
+        </li>
+        <li>
+            <a href="#" onclick="funnyGuy()">Club Penguin</a><span id="jokeP"></span>
+        </li>
+    </ul>
+    
     <footer>
         © Félix Paradis 2018 – <span id="time"></span>
     </footer>
+    
+     <script type="text/javascript">  
         
-    <p id="otherVersions"><a href="./v1/index.html">V1</a></p>
+        function addZeroIfNeeded(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+        }
+
+        function startTime() {
+        var today = new Date();
+        var y = today.getFullYear();
+        var M = addZeroIfNeeded(today.getMonth()+1);
+        var d = addZeroIfNeeded(today.getDate());
+        var h = today.getHours();
+        var m = addZeroIfNeeded(today.getMinutes());
+        var s = addZeroIfNeeded(today.getSeconds());
         
+        document.getElementById('time').innerHTML = d + "/" + M + "/" + y + " " + h + ":" + m + ":" + s;
+        t = setTimeout(function() {
+            startTime()
+        }, 500);
+        }
+        startTime();
+
+        function funnyGuy() {
+            document.getElementById("jokeP").innerHTML = " No, not really."
+        }
+     
+        
+        // activateCheats()
+        // the 'official' Konami Code sequence
+        var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+
+        // a variable to remember the 'position' the user has reached so far.
+        var konamiCodePosition = 0;
+
+        // add keydown event listener
+        window.addEventListener('keydown', function(e) {
+        var key = e.code;
+        var requiredKey = konamiCode[konamiCodePosition];
+        if (key == requiredKey) {
+            console.log("😱")
+            konamiCodePosition++;
+
+            if (konamiCodePosition == konamiCode.length) {
+            activateCheat();
+            konamiCodePosition = 0;
+            }
+        } else {
+            konamiCodePosition = 0;
+        }
+        });
+
+        function activateCheat() {
+            document.body.style.animation = "crazyBG 2s infinite";
+
+            var screenWidth = screen.width
+
+            for(var i = 0; i < screenWidth; i+=100) {
+                var node = document.createElement("span");
+                node.innerHTML = "🎉"
+                node.style.animation = "fall 5s infinite linear, rotate 4s infinite linear"
+                node.className += "joy"
+                node.style.left = i + "px"
+                document.body.appendChild(node);       
+            }
+            var congrats = document.createElement("h1");
+            congrats.innerHTML = "¡CONGRATULATIONS!"
+            congrats.className += "wow"
+            document.body.appendChild(congrats)
+        }   
+
+     </script>
+
  
 
 

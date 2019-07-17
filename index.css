@@ -1,0 +1,94 @@
+@keyframes crazyBG {
+    0%   {background-color: #F00;}
+    33.3%  {background-color: #0F0;}
+    66.6%  {background-color: #00F;}
+    100%  {background-color: #F00;}
+}
+
+@keyframes fall {
+    0%   {top: -10vh;}
+    90%   {top: 110vh;}
+    91%   {opacity:1;}
+    92%   {top: 110vh;}
+    93%   {opacity:0;}
+    100%   {top: -10vh;
+        opacity:0;}
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    100%   {transform: rotate(360deg);}
+}
+
+@keyframes zoomies {
+    0%   {font-size: 1em;}
+    50%   {font-size: 4em;}
+    100%   {font-size: 1em;}
+}
+
+body {
+    font-family: 'Vollkorn', serif;
+    font-size: 1.25em;
+    background: #222;
+    color:#DDD; /* #62e23c */ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    position: relative;
+}
+
+a {
+    color: #45afff;
+}
+/* a:visited { */
+    /* color:violet; */
+/* } */
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+main {
+    max-width: 860px;
+}
+
+p {
+    line-height: 1.75em;
+}
+
+#otherVersions {
+    font-family: sans-serif;
+    position: absolute;
+    bottom: -3em;
+    left: 2px;
+}
+
+.joy {
+    animation: fall 5s infinite linear,
+                rotate 4s infinite linear;
+    position:absolute;
+    font-size: 3em;
+}
+
+.wow {
+    color: #FFF;
+    animation: zoomies 3s infinite;
+}
+
+li {
+    margin: 0.25em 0;
+    padding: 0.25em;        
+}
