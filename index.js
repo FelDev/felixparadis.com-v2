@@ -1,3 +1,20 @@
+let darkTheme = true;
+
+function switchTheme() {
+    let body = document.getElementsByTagName("body")[0];
+    // let h3 = document.getElementsByTagName("h3")[0];
+    body.style.transition = "1s"
+    if (darkTheme) {
+        body.classList.add("lightTheme")
+        // h3.style.textTransform = "uppercase"       
+    } else {
+        body.classList.remove("lightTheme")
+        // h3.style.textTransform = "unset"  
+
+    }
+    darkTheme = !darkTheme
+}
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 // * Footer Timer Thingy 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -25,7 +42,7 @@ function startTime() {
 startTime();
 
 function funnyGuy() {
-    document.getElementById("jokeP").innerHTML = " No, not really."
+    document.getElementById("jokeP").innerHTML += "😛"
 }
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

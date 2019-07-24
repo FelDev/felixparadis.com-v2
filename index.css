@@ -27,6 +27,7 @@
 }
 
 body {
+    animation: fadeIn 1s linear;
     font-family: 'Vollkorn', serif;
     font-size: 1.25em;
     background: #222;
@@ -39,9 +40,19 @@ body {
     position: relative;
 }
 
+body.lightTheme {
+    background: #DDD;
+    color: #222;
+}
+
 a {
     color: #45afff;
 }
+
+body.lightTheme a {
+    color: #0b6eb9;
+}
+
 /* a:visited { */
     /* color:violet; */
 /* } */
@@ -57,9 +68,15 @@ h3 {
     font-size: 1.5em;
 }
 
-h1,h2,h3 {
+h1, h2, h3 {
     text-align: center;
 }
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 
 main {
     max-width: 860px;
@@ -74,6 +91,15 @@ p {
     position: absolute;
     bottom: -3em;
     left: 2px;
+}
+
+#themeSwitcher {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: none;
+    border: none;
+    font-size: 1.25em;
 }
 
 .joy {
@@ -92,3 +118,6 @@ li {
     margin: 0.25em 0;
     padding: 0.25em;        
 }
+
+
+
