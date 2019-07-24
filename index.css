@@ -38,6 +38,7 @@ body {
     justify-content: space-around;
     min-height: 100vh;
     position: relative;
+    margin-top: 0;
 }
 
 body.lightTheme {
@@ -95,11 +96,14 @@ p {
 
 #themeSwitcher {
     position: absolute;
-    top: 0.5em;
+    transform: rotate(180deg);
+    top: 0;
     right: 0.5em;
     background: none;
+    line-height: 1em;
     border: none;
     font-size: 1.25em;
+    padding-bottom: 0;
 }
 
 .joy {
