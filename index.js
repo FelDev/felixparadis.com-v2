@@ -28,16 +28,13 @@ function addZeroIfNeeded(i) {
 function startTime() {
     var today = new Date();
     var y = today.getFullYear();
-    var M = addZeroIfNeeded(today.getMonth()+1);
+    var m = addZeroIfNeeded(today.getMonth()+1);
     var d = addZeroIfNeeded(today.getDate());
-    var h = today.getHours();
-    var m = addZeroIfNeeded(today.getMinutes());
-    var s = addZeroIfNeeded(today.getSeconds());
 
-    document.getElementById('time').innerHTML = d + "/" + M + "/" + y + " " + h + ":" + m + ":" + s;
+    document.getElementById('time').innerHTML = d + "/" + m + "/" + y;
     t = setTimeout(function() {
         startTime()
-    }, 500);
+    }, 5000);
 }
 startTime();
 
