@@ -5,6 +5,11 @@
     100%  {background-color: #F00;}
 }
 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 @keyframes fall {
     0%   {top: -10vh;}
     90%   {top: 110vh;}
@@ -54,10 +59,6 @@ body.lightTheme a {
     color: #0b6eb9;
 }
 
-/* a:visited { */
-    /* color:violet; */
-/* } */
-
 h1 {
     font-size: 3em;
 }
@@ -72,12 +73,6 @@ h3 {
 h1, h2, h3 {
     text-align: center;
 }
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 
 main {
     max-width: 860px;
@@ -96,7 +91,6 @@ p {
 
 #themeSwitcher {
     position: absolute;
-    transform: rotate(180deg);
     top: 0;
     right: 0.5em;
     background: none;
@@ -104,6 +98,32 @@ p {
     border: none;
     font-size: 1.25em;
     padding-bottom: 0;
+    width: 3rem;
+}
+
+#themeSwitcher svg {
+    fill:#EEE;
+    stroke:#222;
+    transition: 1s;
+}
+
+body.lightTheme #themeSwitcher svg {
+    fill:#111;
+    stroke:#111;
+}
+
+#themeSwitcher:focus {
+    outline: none;
+}
+
+#themeSwitcher:hover svg,
+#themeSwitcher:focus svg {
+    stroke: #ff0;
+}
+
+body.lightTheme #themeSwitcher:hover svg,
+body.lightTheme #themeSwitcher:focus svg {
+    stroke: #BBB;
 }
 
 .joy {
