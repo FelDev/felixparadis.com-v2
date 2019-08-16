@@ -59,6 +59,10 @@ body.lightTheme a {
     color: #0b6eb9;
 }
 
+footer {
+    font-size: 1rem;
+}
+
 h1 {
     font-size: 3em;
 }
@@ -109,22 +113,20 @@ p {
 
 body.lightTheme #themeSwitcher svg {
     fill:#111;
-    stroke:#111;
 }
 
 #themeSwitcher:focus {
     outline: none;
 }
 
-#themeSwitcher:hover svg,
 #themeSwitcher:focus svg {
+    stroke: #BBB;
+}
+
+#themeSwitcher:hover svg {
     stroke: #ff0;
 }
 
-body.lightTheme #themeSwitcher:hover svg,
-body.lightTheme #themeSwitcher:focus svg {
-    stroke: #BBB;
-}
 
 .joy {
     animation: fall 5s infinite linear,
