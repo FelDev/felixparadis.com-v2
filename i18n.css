@@ -1,0 +1,7 @@
+html:lang(fr) .en {
+    display: none;
+}
+
+html:lang(en) .fr {
+    display: none;
+}

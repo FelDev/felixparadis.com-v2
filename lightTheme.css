@@ -1,0 +1,22 @@
+body.lightTheme {
+    background: #DDD;
+    color: #222;
+}
+
+body.lightTheme a {
+    color: #0b6eb9;
+}
+
+body.lightTheme #langSwitcher {
+    border-color: #222;
+    color: #333;
+}
+
+body.lightTheme #langSwitcher:focus {
+    outline: none;
+    box-shadow: #222 0px 0px 2px 2px;
+}
+
+body.lightTheme #themeSwitcher svg {
+    fill:#111;
+}

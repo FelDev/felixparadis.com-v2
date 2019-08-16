@@ -1,18 +1,39 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Theme Switching 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 let darkTheme = true;
+let body = document.getElementsByTagName("body")[0];
 
 function switchTheme() {
-    let body = document.getElementsByTagName("body")[0];
-    // let h3 = document.getElementsByTagName("h3")[0];
-    body.style.transition = "1s"
+    body.classList.add("loaded")
     if (darkTheme) {
         body.classList.add("lightTheme")
-        // h3.style.textTransform = "uppercase"       
     } else {
         body.classList.remove("lightTheme")
-        // h3.style.textTransform = "unset"  
-
     }
     darkTheme = !darkTheme
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Language Switching 
+// * Inspired by:
+// * https://www.smashingmagazine.com/2014/06/css-driven-internationalization-in-javascript/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+let currrentLang = 'en'
+let main = document.getElementsByTagName('main')[0]
+function switchLang() {
+    main.classList.add("loaded")
+    main.style.opacity = 0;
+    setTimeout(() => {
+        if (document.documentElement.lang == "fr") {
+            document.documentElement.lang = "en"    
+        } else {
+            document.documentElement.lang = "fr"
+        }
+        main.style.opacity = 1;    
+    }, 250);
 }
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -42,20 +63,6 @@ function funnyGuy() {
     document.getElementById("jokeP").innerHTML += "😛"
 }
 
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-// * i18n 
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-let i18n = {
-    "en" : {
-        
-    },
-    "fr" : {
-
-    }
-}
-
-    
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 // * Konami Code Party 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

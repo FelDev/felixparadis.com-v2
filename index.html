@@ -58,51 +58,81 @@
 
     <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="lightTheme.css" />
+    <link rel="stylesheet" type="text/css" href="i18n.css" />
 
     <script type="text/javascript" async="" src="index.js"></script>
 
  </head>
 
  <body>
+    <button id="themeSwitcher" onclick="switchTheme()">
+
+     <svg class="bulb" viewbox="0 0 500 470" xmlns="http://www.w3.org/2000/svg">
+         <g id="svg_5" transform="rotate(-180 255.88516235351562,174.38201904296872) ">
+             <path d="m288.446879,260.434528l-65.123452,0c-4.493518,0 -8.140431,3.646913 -8.140431,8.140431s3.646913,8.140431 8.140431,8.140431l65.123452,0c4.493518,0 8.140431,-3.646913 8.140431,-8.140431s-3.646913,-8.140431 -8.140431,-8.140431zm0,32.561726l-65.123452,0c-4.493518,0 -8.140431,3.646913 -8.140431,8.140431s3.646913,8.140431 8.140431,8.140431l65.123452,0c4.493518,0 8.140431,-3.646913 8.140431,-8.140431s-3.646913,-8.140431 -8.140431,-8.140431zm4.070216,32.561726l-73.263883,0l19.341665,12.731635c2.507253,2.246759 6.186728,3.549228 10.012731,3.549228l14.571372,0c3.809722,0 7.505478,-1.302469 10.012731,-3.549228l19.325384,-12.731635zm61.053236,-224.659628c0,58.1064 -52.326694,97.408403 -52.326694,143.255313l-90.716969,0c0,-45.84691 -52.326694,-85.148913 -52.326694,-143.255313c0,-60.613653 48.810027,-93.973141 97.636335,-93.973141c48.85887,0 97.734021,33.39205 97.734021,93.973141l0.000001,0z" id="svg_4" stroke="null"/>
+         </g>
+         <line fill="none" stroke-width="14" x1="142.980798" y1="179.913938" x2="64.980794" y2="129.519201" id="svg_7" stroke-linejoin="undefined" stroke-linecap="undefined" />
+         <line fill="none" stroke-width="14" x1="459.5" y1="345.394736" x2="381.499996" y2="294.999999" id="svg_2" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-5.262998580932617 420.4999999999988,320.19738769531244) "/>
+         <line fill="none" stroke-width="14" x1="297.5" y1="441.394736" x2="219.499996" y2="390.999999" id="svg_3" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(57.67613983154297 258.50000000000006,416.19738769531244) "/>
+         <line fill="none" stroke-width="14" x1="199.5" y1="413.394736" x2="121.499996" y2="362.999999" id="svg_8" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-82.25203704833984 160.49999999999997,388.19738769531244) "/>
+         <line fill="none" stroke-width="14" x1="142.5" y1="340.394736" x2="64.499996" y2="289.999999" id="svg_9" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-51.42600631713867 103.49999999999997,315.1973876953125) "/>
+         <line fill="none" stroke-width="14" x1="128.5" y1="253.394736" x2="50.499996" y2="202.999999" id="svg_10" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-25.16313362121582 89.50000000000003,228.1973571777344) "/>
+         <line fill="none" stroke-width="14" x1="401.5" y1="415.394736" x2="323.499996" y2="364.999999" id="svg_11" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(15.396310806274414 362.4999999999998,390.19738769531256) "/>
+         <line fill="none" stroke-width="14" x1="469.5" y1="254.394736" x2="391.499996" y2="203.999999" id="svg_12" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-40.7758903503418 430.49999999999983,229.19735717773435) "/>
+         <line fill="none" stroke-width="14" x1="440.114835" y1="183.009571" x2="362.114831" y2="132.614834" id="svg_13" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-56.410648345947266 401.1148376464843,157.81219482421872) "/>
+     </svg>
+    </button>
     <main>
 
-        <button id="themeSwitcher" onclick="switchTheme()">
-            <svg class="bulb" viewbox="0 0 500 470" xmlns="http://www.w3.org/2000/svg">
-                <g id="svg_5" transform="rotate(-180 255.88516235351562,174.38201904296872) ">
-                    <path d="m288.446879,260.434528l-65.123452,0c-4.493518,0 -8.140431,3.646913 -8.140431,8.140431s3.646913,8.140431 8.140431,8.140431l65.123452,0c4.493518,0 8.140431,-3.646913 8.140431,-8.140431s-3.646913,-8.140431 -8.140431,-8.140431zm0,32.561726l-65.123452,0c-4.493518,0 -8.140431,3.646913 -8.140431,8.140431s3.646913,8.140431 8.140431,8.140431l65.123452,0c4.493518,0 8.140431,-3.646913 8.140431,-8.140431s-3.646913,-8.140431 -8.140431,-8.140431zm4.070216,32.561726l-73.263883,0l19.341665,12.731635c2.507253,2.246759 6.186728,3.549228 10.012731,3.549228l14.571372,0c3.809722,0 7.505478,-1.302469 10.012731,-3.549228l19.325384,-12.731635zm61.053236,-224.659628c0,58.1064 -52.326694,97.408403 -52.326694,143.255313l-90.716969,0c0,-45.84691 -52.326694,-85.148913 -52.326694,-143.255313c0,-60.613653 48.810027,-93.973141 97.636335,-93.973141c48.85887,0 97.734021,33.39205 97.734021,93.973141l0.000001,0z" id="svg_4" stroke="null"/>
-                </g>
-                <line fill="none" stroke-width="14" x1="142.980798" y1="179.913938" x2="64.980794" y2="129.519201" id="svg_7" stroke-linejoin="undefined" stroke-linecap="undefined" />
-                <line fill="none" stroke-width="14" x1="459.5" y1="345.394736" x2="381.499996" y2="294.999999" id="svg_2" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-5.262998580932617 420.4999999999988,320.19738769531244) "/>
-                <line fill="none" stroke-width="14" x1="297.5" y1="441.394736" x2="219.499996" y2="390.999999" id="svg_3" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(57.67613983154297 258.50000000000006,416.19738769531244) "/>
-                <line fill="none" stroke-width="14" x1="199.5" y1="413.394736" x2="121.499996" y2="362.999999" id="svg_8" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-82.25203704833984 160.49999999999997,388.19738769531244) "/>
-                <line fill="none" stroke-width="14" x1="142.5" y1="340.394736" x2="64.499996" y2="289.999999" id="svg_9" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-51.42600631713867 103.49999999999997,315.1973876953125) "/>
-                <line fill="none" stroke-width="14" x1="128.5" y1="253.394736" x2="50.499996" y2="202.999999" id="svg_10" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-25.16313362121582 89.50000000000003,228.1973571777344) "/>
-                <line fill="none" stroke-width="14" x1="401.5" y1="415.394736" x2="323.499996" y2="364.999999" id="svg_11" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(15.396310806274414 362.4999999999998,390.19738769531256) "/>
-                <line fill="none" stroke-width="14" x1="469.5" y1="254.394736" x2="391.499996" y2="203.999999" id="svg_12" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-40.7758903503418 430.49999999999983,229.19735717773435) "/>
-                <line fill="none" stroke-width="14" x1="440.114835" y1="183.009571" x2="362.114831" y2="132.614834" id="svg_13" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(-56.410648345947266 401.1148376464843,157.81219482421872) "/>
-            </svg>
+        <h1>
+            <span class="en">Hello!</span>
+            <span class="fr">Bonjour!</span>
+        </h1>
+        <button id="langSwitcher" onclick="switchLang()">
+            <span class="en">Bonjour?</span>
+            <span class="fr">Hello?</span>
         </button>
 
-        <h1><span> Bonjour!</span> <span>Hi!</span></h1>
-        <!-- <h1><button> Bonjour!</button> <button>Hi!</button></h1> -->
-
-        <h2> I'm Félix Paradis 👋 </h2>
-        <!-- <h3> I believe dark theme is good theme. </h3> -->
-
-        <p>
-            Most of my non-work code is on <a href="https://github.com/FelDev">GitHub</a> or <a href="https://codepen.io/FelDev/">Code Pen</a>.
+        <h2> 
+            <span class="en">I'm Félix Paradis 👋</span>
+            <span class="fr">Je suis Félix Paradis 👋 </span>
+        </h2>
+        
+        <p >
+            <span class="en">
+                Most of my non-work code is on <a href="https://github.com/FelDev">GitHub</a> or <a href="https://codepen.io/FelDev/">Code Pen</a>.
+            </span>
+            <span class="fr">
+                La plupart de mon code pas-pour-la-job est sur <a href="https://github.com/FelDev">GitHub</a> ou <a href="https://codepen.io/FelDev/">Code Pen</a>.
+            </span>
         </p>
         
         <p>
-            I also have a  <a href="https://stackexchange.com/users/7861276/feldev?tab=accounts">Stack Exchange</a> account.
+            <span class="en">
+                I also have a  <a href="https://stackexchange.com/users/7861276/feldev?tab=accounts">Stack Exchange</a> account.
+            </span>
+            <span class="fr">
+                J'ai aussi un compte sur <a href="https://stackexchange.com/users/7861276/feldev?tab=accounts">Stack Exchange</a>.
+            </span>
         </p>
 
         <p>
-            I write words on <a href="https://medium.com/@FelDev">Medium</a>.
+            <span class="en">
+                I write words on <a href="https://medium.com/@FelDev">Medium</a>.
+            </span>
+            <span class="fr">
+                J'écris sur <a href="https://medium.com/@FelDev">Medium</a>.
+            </span>
         </p>
         
         <p>
-            Find me online at other places:
+            <span class="en">
+                Find me online at other places:
+            </span>
+            <span class="fr">
+                Trouvez moi en ligne ailleurs:
+            </span>
         </p>
         
         <ul>

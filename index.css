@@ -46,17 +46,24 @@ body {
     margin-top: 0;
 }
 
-body.lightTheme {
-    background: #DDD;
-    color: #222;
-}
-
 a {
     color: #45afff;
 }
 
-body.lightTheme a {
-    color: #0b6eb9;
+body.loaded {
+    transition: 1s;
+}
+
+body.loaded a {
+    transition: 1s;
+}
+
+body.loaded #langSwitcher {
+    transition: 1s;
+}
+
+button {
+    cursor: pointer;
 }
 
 footer {
@@ -65,6 +72,7 @@ footer {
 
 h1 {
     font-size: 3em;
+    margin-bottom:0;
 }
 
 h2 {
@@ -82,6 +90,10 @@ main {
     max-width: 860px;
 }
 
+main.loaded {
+    transition: 0.25s;
+}
+
 p {
     line-height: 1.75em;
 }
@@ -91,6 +103,21 @@ p {
     position: absolute;
     bottom: -3em;
     left: 2px;
+}
+
+#langSwitcher {
+    background: none;
+    border-radius: 1em;
+    border-color: #ddd;
+    color: #ddd;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#langSwitcher:focus {
+    outline: none;
+    box-shadow: #ddd 0px 0px 2px 2px;
 }
 
 #themeSwitcher {
@@ -109,10 +136,6 @@ p {
     fill:#EEE;
     stroke:#222;
     transition: 1s;
-}
-
-body.lightTheme #themeSwitcher svg {
-    fill:#111;
 }
 
 #themeSwitcher:focus {
