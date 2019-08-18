@@ -32,7 +32,8 @@ function switchLang() {
         } else {
             document.documentElement.lang = "fr"
         }
-        main.style.opacity = 1;    
+        main.style.opacity = 1;   
+        main.classList.remove("loaded") // else theme switching gets weird...
     }, 250);
 }
 

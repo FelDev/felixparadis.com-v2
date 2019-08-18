@@ -98,6 +98,11 @@ p {
     line-height: 1.75em;
 }
 
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
 #otherVersions {
     font-family: sans-serif;
     position: absolute;
