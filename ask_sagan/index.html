@@ -1,0 +1,244 @@
+<!-- 
+Author: Félix Paradis
+Date: 1 January 2017, Montréal. 
+-->
+<!doctype html>
+<html>
+<head>
+    <title>Ask Sagan </title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="image_src" href="images/Thumbnail.png" /> <!--Pas sur que ça marche ...-->
+        
+    <style>
+
+        body {
+            background-image: url("images/Sagan1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color:  #6F8695;
+            margin:0;
+            padding:0;
+            height:100%;
+        }
+        
+        #Bouton {
+            display: block;
+            font-size: 1em;
+            font-weight: bold;
+            width:150px;
+            height: 35px;
+            border-radius: 14px;
+            margin-left:auto;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+        
+        #Content {
+            padding-bottom: 25px;
+        }
+        
+        footer {
+            background-color: #6F8695;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 2px;
+            text-align: center;
+            position: absolute;
+        }
+        
+        
+        h1 {
+            text-shadow: 5px 5px 4px #000000;
+            color: white;
+            text-align: center;
+        }
+        
+        hr { 
+            margin:40px;
+            width: 600px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        
+        html{
+            height: 100%;
+        }
+        
+        input {
+            width: 600px;
+            height: 20px;
+            border-radius: 5px;
+            display: block;
+            margin-left:auto;
+            margin-right: auto;
+            margin-top: 350px;
+            font-weight:bold;
+            font-family:monospace, sans-serif;
+            background-color: aquamarine;
+        }
+        
+        p {
+            color:white;
+            font-size: 2em;
+            font-family: cursive;
+            width: 620px;
+            margin-top: 40px;
+            margin-left:auto;
+            margin-right: auto;
+            padding-top: 8px;
+            text-shadow: 5px 5px 4px #000000;
+        }
+        
+        #Quote {
+            background: rgba(0, 0, 0, 0.6);
+            width:700px;
+            border-radius: 50px;
+            margin-left:auto;
+            margin-right: auto;
+            padding-left: 20px;
+        }
+    
+        #Signature{
+            font-size: 1.4em;
+            width:150px;
+            margin: -20px 0px 0px auto;
+            padding-bottom: 10px;
+        }
+        
+        .Title {
+            font-size: 3em;
+            font-family: serif;
+        }
+        
+        #Titleleft {
+            text-align: left;
+            margin-left: 25px;
+        }
+        
+        #Titleright {
+            text-align: right;
+            margin-right: 50px;
+        }
+
+        #Counter{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            width: 300px;
+            color: red;
+        }
+        
+        .Light{
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color:red;
+            float:left;
+            margin: 10px 10px 0 10px;
+        }
+        
+        #Wrapper {
+            min-height:100%;
+            position:relative;
+        }
+
+    </style>
+     
+ </head>
+
+<body>
+    <div id="Wrapper">
+        <div id="Content">
+
+            <h1 class="Title" id="Titleleft"> Go ahead son,</h1>
+            <h1  class="Title" id="Titleright">ask a question. </h1>
+        
+            <form onsubmit="javascript:return false;">
+                <input type="text" name="Question" placeholder="Enter your question here..." id="InputQuestion"><br>
+    
+                <input type="submit" value="Get answer" id="Bouton">
+            </form>
+            
+            <div id="Quote">
+                <p>"We make our world significant by the courage of our questions and the depths of our answers."</p>
+                <p id="Signature">- Carl Sagan</p>
+            </div>
+
+            <div id="Counter">
+                <div class= "Light" id="L0"> </div><div class= "Light" id="L1"> </div><div class= "Light" id="L2"></div><div class= "Light" id="L3"></div><div class= "Light" id="L4"></div><div class= "Light" id="L5"></div><div class= "Light" id="L6"></div><div class= "Light" id="L7"></div><div class= "Light" id="L8"></div>
+            </div> <!--Counter-->
+            
+            <button id="BG1">Background 1</button>
+            <button id="BG2">Background 2</button>
+            <button id="BG3">Background 3</button>
+            
+        </div> <!--Content-->
+
+        <footer>
+                © <a href="http://www.felixparadis.com">Félix Paradis</a> 2017
+        </footer>
+    </div>
+        
+    <script type="text/javascript">  
+
+            var snd1=new Audio("sounds/Dont_Know_Find_Out.mp3");
+            var snd2=new Audio("sounds/Gee_Dont_Know.mp3");
+            var snd3=new Audio("sounds/Hundred_Billion.mp3");
+            var snd4=new Audio("sounds/Maybe_Nobody.mp3");
+            var snd5=new Audio("sounds/Maybe_Not.mp3");
+            var snd6=new Audio("sounds/Good_Question_Johnny.mp3");
+            var snd7=new Audio("sounds/First_Thing.mp3");
+            var snd8=new Audio("sounds/400Thousand_Million.mp3");
+            var snd9=new Audio("sounds/Thats_A_Good_Question.mp3");
+        
+            var sound_array = [snd1, snd2, snd3, snd4, snd5, snd6, snd7, snd8, snd9];
+            var played_array = [];
+        
+        document.getElementById("Bouton").onclick= function() {
+            if(played_array.length<9){
+                    while (1==1) {
+                        var SoundToPlay = Math.floor(Math.random() * sound_array.length);
+
+                        if (played_array.includes(SoundToPlay)){
+                                    continue;
+                                }else{
+                            
+                            played_array += SoundToPlay;
+                            break;
+                        }
+                    }
+                }else{
+                var SoundToPlay = Math.floor(Math.random() * sound_array.length);
+                }
+
+            var sound = sound_array[SoundToPlay];
+            sound.play();
+            
+            document.getElementById("L"+SoundToPlay).style.cssText+='background-color: green';
+            
+        }
+        
+        
+        document.getElementById("BG1").onclick= function() {
+            document.body.style.cssText+='background-image: url(images/Sagan1.jpg)';
+            
+        }
+        document.getElementById("BG2").onclick= function() {
+            document.body.style.cssText+='background-image: url(images/Sagan2.jpg)';  
+        }
+        document.getElementById("BG3").onclick= function() {
+            document.body.style.cssText+='background-image: url(images/Sagan3.jpg)';
+        }
+        
+    </script>
+</body>
+    
+</html>
+
+
+
+
