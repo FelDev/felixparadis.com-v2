@@ -103,11 +103,15 @@ ul {
     list-style: none;
 }
 
-#otherVersions {
+#bottomLinks {
     font-family: sans-serif;
     position: absolute;
     bottom: -3em;
     left: 2px;
+}
+
+#bottomLinks a {
+    margin-right: 1rem;
 }
 
 #langSwitcher {
