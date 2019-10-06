@@ -12,7 +12,7 @@
      <meta property="og:title" content="Home of Félix Paradis" />
      <meta property="og:type" content="website" />
      <meta property="og:url" content="https://www.felixparadis.com" />
-     <meta property="og:image" content="https://www.felixparadis.com/portrait.png" />
+     <meta property="og:image" content="https://www.felixparadis.com/assets/portrait.png" />
      <meta name="author" content="Félix Paradis">
      
     <title> ( ͡° ͜ʖ ͡°) </title>
@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/lightTheme.css" />
     <link rel="stylesheet" type="text/css" href="css/i18n.css" />
+    <link rel="stylesheet" type="text/css" href="css/referrals.css" />
 
     <script async="" src="index.js"></script>
 
@@ -60,43 +61,93 @@
             <span class="fr">Merci de passer par ici 😌 </span>
         </h2>
         
-        <p >
+        <p id="refDesc">
             <span class="en">
-                All links here are referrals that reward me and you when you use them.
+                All links below are referrals that reward me and you when you use them.
             </span>
             <span class="fr">
-                Tout les liens ici nous récompense (moi et vous) quand vous les utiliser.
-            </span>
-        </p>
-        
-        <p>
-            <span class="en">
-                <a href="https://brave.com/fel197">Download the Brave Browser.</a> This only gives me 5$USD worth of BAT if you use it for a minimum of 30 days. What's in it for you is a great, fast and privacy-respecting browser.
-            </span>
-            <span class="fr">
-                <a href="https://brave.com/fel197">Téléchargez le navigateur Brave.</a> Ce lien me donne 5$USD de BAT seulement si vous utiliser Brave pour un minimum de 30 jours. Le bonus pour vous? Découvrez un navigateur rapide qui respecte votre vie privé.
+                Les liens dans cette liste nous récompense (moi et vous) quand vous les utiliser.
             </span>
         </p>
 
-        <p>
-            <span class="en">
-                <a href="https://www.coinbase.com/join/paradi_1w">Buy crypto currencies with Coinbase.</a> Probably the easiest way to buy crypto with a credit card. Use this link and we both get about 10$US of BTC!
-            </span>
-            <span class="fr">
-                <a href="https://www.coinbase.com/join/paradi_1w">Achetez de la cryptomonnaie avec Coinbase.</a> Probablement la façon la plus facile d'acheter de la crypto avec une carte de crédit. Utilisez ce lien et nous recevrons chacun environ 10$US de BTC!
-            </span>
-        </p>
-        
-        <p>
-            <span class="en">
-                    <a href="https://bylls.com/signup?referralcode=90be9bb29727fb55cbaa0827932506cc7178b5f34f">Buy/sell BitCoin with Bylls/Bull Bitcoin.</a> Bylls and Bull Bitcoin specialize in making the buying and selling of BTC easy for Canadians. 
-            </span>
-            <span class="fr">
-                    <a href="https://bylls.com/signup?referralcode=90be9bb29727fb55cbaa0827932506cc7178b5f34f">Achetez/vendez du BitCoin avec Bylls/Bull Bitcoin.</a> Bylls et Bull Bitcoin se spécialisent dans la vente et l'achat de BitCoin en échange d'argent Canadien. 
-                Trouvez moi en ligne ailleurs:
-            </span>
-        </p>
-        
+        <section id="refLinks">
+
+            
+            <div class="refLink">
+            <a href="www.airbnb.ca/r/felixp1051"><img src="/assets/airbnb.png" alt="airbnb logo"></a>
+                <a class="en" href="www.airbnb.ca/r/felixp1051">Become a host on airbnb.</a> 
+                <a class="fr" href="www.airbnb.ca/r/felixp1051"> Devenez un hôte airbnb.</a> 
+                <p>
+                    <span class="en">
+                        Use this link and we both get money after your first reservation. (The amount varies.)
+                    </span>
+                    <span class="fr">
+                        Utilisez ce lien et nous recevrons tout les 2 un bonus en argent après votre première réservation. (Le montant varie.)
+                    </span>
+                </p>
+            </div>
+
+            <div class="refLink">
+                <a href="https://brave.com/fel197"><img src="/assets/brave.svg" alt=""></a>
+                <a class="en" href="https://brave.com/fel197">Try the Brave Browser.</a>
+                <a class="fr" href="https://brave.com/fel197">Essayez le navigateur Brave.</a> 
+                <p>
+                    <span class="en">
+                        Try a fast browser that defends your online privacy and I'll get 5$US worth of BAT in the process (if you use it for a minimum of 30 days). 
+                    </span>
+                    <span class="fr">
+                        Découvrez un navigateur plus rapide qui respecte votre vie privé et je recevrai 5$US de BAT (si vous utiliser Brave pour un minimum de 30 jours). 
+                    </span>
+                </p>
+            </div>
+            
+            <div class="refLink">
+                <a href="https://www.coinbase.com/join/paradi_1w"><img src="/assets/coinbase.png" alt=""></a>
+                <a class="en" href="https://www.coinbase.com/join/paradi_1w">Buy crypto currencies with Coinbase.</a> 
+                <a class="fr" href="https://www.coinbase.com/join/paradi_1w">Achetez de la cryptomonnaie avec Coinbase.</a> 
+                <p>
+                    <span class="en">
+                        The easiest way to buy crypto with a credit card. Use this link and we both get 10$US of BTC if you purchase for more than 100$US!
+                    </span>
+                    <span class="fr">
+                        Probablement la façon la plus facile d'acheter de la crypto avec une carte de crédit. Utilisez ce lien et nous recevrons chacun 10$US de BTC après votre premier achat de plus de 100$US!
+                    </span>
+                </p>
+            </div>
+            
+            <div class="refLink">
+                <div class="beLikeA">
+                    <a href="https://bylls.com/signup?referralcode=90be9bb29727fb55cbaa0827932506cc7178b5f34f"><img src="/assets/bylls.png" alt=""></a>
+                    <a href="https://bullbitcoin.com/signup?referralcode=90be9bb29727fb55cbaa0827932506cc7178b5f34f"><img src="/assets/bullbitcoin.png" alt=""></a>
+                </div>
+                <a class="en" href="https://bylls.com/signup?referralcode=90be9bb29727fb55cbaa0827932506cc7178b5f34f">Buy/sell BitCoin with Bylls/Bull Bitcoin.</a> 
+                <a class="fr" href="https://bylls.com/signup?referralcode=90be9bb29727fb55cbaa0827932506cc7178b5f34f">Achetez/vendez du BitCoin avec Bylls/Bull Bitcoin.</a> 
+                <p>
+                    <span class="en">
+                        Bylls and Bull Bitcoin specialize in making the buying and selling of BTC easy for Canadians. Use my referral to open an account and we both get a few Canadian bucks. 
+                    </span>
+                    <span class="fr">
+                        Bylls et Bull Bitcoin se spécialisent dans la vente et l'achat de BitCoin en échange d'argent Canadien. Utilisez mes liens pour ouvrir un compte et nous recevrons tous les 2 quelques dollars Canadiens.
+                    </span>
+                </p>
+            </div>
+
+            <div class="refLink">
+                <a href="https://www.binance.com/en/register?ref=KXJNXRJP"><img src="/assets/binance.png" alt=""></a>
+                <a class="en" href="https://www.binance.com/en/register?ref=KXJNXRJP">Open a trading account on Binance.</a> 
+                <a class="fr" href="https://www.binance.com/en/register?ref=KXJNXRJP">Ouvrez un compte sur Binance.</a> 
+                <p>
+                    <span class="en">
+                        If you use this link to sign up, we both get an extra 10% of commision on every trade you make.
+                    </span>
+                    <span class="fr">
+                        Utilisez ce lien et nous recevrons chacun 10% de commision pour chacune de vos échange!
+                    </span>
+                </p>
+            </div>
+            
+        </section>
+            
 
         
         
