@@ -5,14 +5,63 @@
 let darkTheme = true;
 let body = document.getElementsByTagName("body")[0];
 
-function switchTheme() {
+function switchTheme(doTheHandThing) {
     body.classList.add("loaded")
     if (darkTheme) {
         body.classList.add("lightTheme")
+        setTimeout(() => {
+            if (doTheHandThing) {
+                closeTheLights()
+            }
+        }, 500);
     } else {
         body.classList.remove("lightTheme")
     }
     darkTheme = !darkTheme
+}
+
+
+let h2 = document.getElementById("handyH2");
+
+if (h2) {
+    window.onresize = positionHand;
+    
+    function positionHand() {
+        let h2Info = h2.getBoundingClientRect()
+        let hand = document.getElementById("hand")
+        
+        if (h2Info.width + 100 > window.innerWidth) {
+            hand.style.top = (h2Info.top - 45) + "px"
+            hand.style.left = (h2Info.width - 45) + "px"
+        } else {
+            hand.style.top = h2Info.top + "px"
+            hand.style.left = h2Info.left + h2Info.width + "px"
+        }
+    }
+    positionHand()
+}
+
+let closing = false;
+
+function closeTheLights() {
+    if (closing || darkTheme) {
+        return;
+    }
+    closing = !closing
+    let lightInfo = document.getElementById("themeSwitcher").getBoundingClientRect()
+    let hand = document.getElementById("hand")
+    
+    hand.style.transition = '2s';
+    hand.style.left = lightInfo.left + 'px';
+    hand.style.top = lightInfo.top + 'px';
+    setTimeout(() => {
+        positionHand()
+        switchTheme()
+        closing = !closing
+        setTimeout(() => {
+            hand.style.transition = '0s';
+        }, 2000);
+    }, 2000);
 }
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -34,6 +83,7 @@ function switchLang() {
         }
         main.style.opacity = 1;   
         main.classList.remove("loaded") // else theme switching gets weird...
+        positionHand()
     }, 250);
 }
 

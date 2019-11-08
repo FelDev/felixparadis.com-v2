@@ -50,6 +50,10 @@ a {
     color: #45afff;
 }
 
+a:hover {
+    text-decoration-color: chartreuse;
+}
+
 body.loaded {
     transition: 1s;
 }
@@ -112,6 +116,16 @@ ul {
 
 #bottomLinks a {
     margin-right: 1rem;
+}
+
+#hand {
+    position: absolute;
+}
+
+#handyH2 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #langSwitcher {
