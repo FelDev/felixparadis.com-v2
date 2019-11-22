@@ -7,6 +7,10 @@ img {
     margin: auto;
 }
 
+#kofi img {
+    padding: 0;
+}
+
 #refDesc {
     text-align: center;
 }
