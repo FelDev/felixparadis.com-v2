@@ -31,6 +31,14 @@
     100%   {font-size: 1em;}
 }
 
+@keyframes wave {
+    0%   {transform: rotate(0deg) perspective(0);}
+    25%  {transform: rotate(45deg) translate(2px, -8px) perspective(0);}
+    50%  {transform: rotate(0deg) perspective(0);}
+    75%  {transform: rotate(45deg) translate(2px, -8px) perspective(0);}
+    100% {transform: rotate(0deg) perspective(0);}
+}
+
 body {
     animation: fadeIn 1s linear;
     font-family: 'Vollkorn', serif;
@@ -120,12 +128,19 @@ ul {
 
 #hand {
     position: absolute;
+    top: -0.5rem;
+    right: -2.5rem;
+}
+
+#hand.wave {
+    animation: wave 1.5s 1 ease;
 }
 
 #handyH2 {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 #langSwitcher {
