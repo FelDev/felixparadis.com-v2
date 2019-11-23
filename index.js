@@ -69,7 +69,7 @@ function funnyGuy() {
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 let hand = document.getElementById("hand")
 hand.addEventListener("mouseenter", wave)
-// hand.addEventListener("click", wave); // needed on mobile?
+hand.addEventListener("click", wave); // needed on mobile?
 let waving = false;
 function wave() {
     if (waving) {
