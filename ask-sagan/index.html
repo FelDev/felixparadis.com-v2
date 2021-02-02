@@ -7,8 +7,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:description" content="Ask any question and get Carl Sagan's answer! &quot;We make our world significant by the courage of our questions and the depths of our answers.&quot;">
+    <meta property="og:image" content="/ask-sagan/images/Thumbnail.png">
     <meta name="description" content="Ask any question and get Carl Sagan's answer! &quot;We make our world significant by the courage of our questions and the depths of our answers.&quot;">
-    <link rel="image_src" href="images/Thumbnail.png" /> <!--Pas sur que ça marche ...-->
+    <link rel="image_src" href="/ask-sagan/images/Thumbnail.png" /> <!--Pas sur que ça marche ...-->
         
     <style>
 
@@ -139,12 +140,16 @@
             font-family: serif;
         }
         
-        #Titleleft {
+        .Title span {
+            display: block;
+        }
+
+        .Title span:first-of-type {
             text-align: left;
             margin-left: 5vw;
         }
         
-        #Titleright {
+        .Title span:last-of-type {
             text-align: right;
             margin-right: 5vw;
         }
@@ -179,8 +184,7 @@
     <div id="Wrapper">
         <div id="Content">
             <section>
-                <h1 class="Title" id="Titleleft"> Go ahead son,</h1>
-                <h1  class="Title" id="Titleright">ask a question. </h1>
+                <h1 class="Title"><span>Go ahead son,</span> <span>ask a question.</span></h1>
             </section>
         
             <form onsubmit="javascript:return false;">
